@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63AADDE11D3708A3003FE38C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AADDE01D3708A2003FE38C /* AppDelegate.swift */; };
+		63AADDE31D3708A3003FE38C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 63AADDE21D3708A3003FE38C /* GameScene.sks */; };
+		63AADDE51D3708A3003FE38C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AADDE41D3708A3003FE38C /* GameScene.swift */; };
+		63AADDE71D3708A3003FE38C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AADDE61D3708A3003FE38C /* GameViewController.swift */; };
+		63AADDEA1D3708A3003FE38C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AADDE81D3708A3003FE38C /* Main.storyboard */; };
+		63AADDEC1D3708A3003FE38C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AADDEB1D3708A3003FE38C /* Assets.xcassets */; };
+		63AADDEF1D3708A3003FE38C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AADDED1D3708A3003FE38C /* LaunchScreen.storyboard */; };
+		63AADDFA1D3708A3003FE38C /* StreetRageProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AADDF91D3708A3003FE38C /* StreetRageProjectTests.swift */; };
+		63AADE051D3708A3003FE38C /* StreetRageProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AADE041D3708A3003FE38C /* StreetRageProjectUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63AADDF61D3708A3003FE38C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63AADDD51D3708A2003FE38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63AADDDC1D3708A2003FE38C;
+			remoteInfo = StreetRageProject;
+		};
+		63AADE011D3708A3003FE38C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63AADDD51D3708A2003FE38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63AADDDC1D3708A2003FE38C;
+			remoteInfo = StreetRageProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63AADDDD1D3708A2003FE38C /* StreetRageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetRageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AADDE01D3708A2003FE38C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63AADDE21D3708A3003FE38C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		63AADDE41D3708A3003FE38C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		63AADDE61D3708A3003FE38C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		63AADDE91D3708A3003FE38C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63AADDEB1D3708A3003FE38C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63AADDEE1D3708A3003FE38C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63AADDF01D3708A3003FE38C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63AADDF51D3708A3003FE38C /* StreetRageProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetRageProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AADDF91D3708A3003FE38C /* StreetRageProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetRageProjectTests.swift; sourceTree = "<group>"; };
+		63AADDFB1D3708A3003FE38C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63AADE001D3708A3003FE38C /* StreetRageProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetRageProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63AADE041D3708A3003FE38C /* StreetRageProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetRageProjectUITests.swift; sourceTree = "<group>"; };
+		63AADE061D3708A3003FE38C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63AADDDA1D3708A2003FE38C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AADDF21D3708A3003FE38C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AADDFD1D3708A3003FE38C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63AADDD41D3708A2003FE38C = {
+			isa = PBXGroup;
+			children = (
+				63AADDDF1D3708A2003FE38C /* StreetRageProject */,
+				63AADDF81D3708A3003FE38C /* StreetRageProjectTests */,
+				63AADE031D3708A3003FE38C /* StreetRageProjectUITests */,
+				63AADDDE1D3708A2003FE38C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63AADDDE1D3708A2003FE38C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63AADDDD1D3708A2003FE38C /* StreetRageProject.app */,
+				63AADDF51D3708A3003FE38C /* StreetRageProjectTests.xctest */,
+				63AADE001D3708A3003FE38C /* StreetRageProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63AADDDF1D3708A2003FE38C /* StreetRageProject */ = {
+			isa = PBXGroup;
+			children = (
+				63AADDE01D3708A2003FE38C /* AppDelegate.swift */,
+				63AADDE21D3708A3003FE38C /* GameScene.sks */,
+				63AADDE41D3708A3003FE38C /* GameScene.swift */,
+				63AADDE61D3708A3003FE38C /* GameViewController.swift */,
+				63AADDE81D3708A3003FE38C /* Main.storyboard */,
+				63AADDEB1D3708A3003FE38C /* Assets.xcassets */,
+				63AADDED1D3708A3003FE38C /* LaunchScreen.storyboard */,
+				63AADDF01D3708A3003FE38C /* Info.plist */,
+			);
+			path = StreetRageProject;
+			sourceTree = "<group>";
+		};
+		63AADDF81D3708A3003FE38C /* StreetRageProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				63AADDF91D3708A3003FE38C /* StreetRageProjectTests.swift */,
+				63AADDFB1D3708A3003FE38C /* Info.plist */,
+			);
+			path = StreetRageProjectTests;
+			sourceTree = "<group>";
+		};
+		63AADE031D3708A3003FE38C /* StreetRageProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				63AADE041D3708A3003FE38C /* StreetRageProjectUITests.swift */,
+				63AADE061D3708A3003FE38C /* Info.plist */,
+			);
+			path = StreetRageProjectUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63AADDDC1D3708A2003FE38C /* StreetRageProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63AADE091D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProject" */;
+			buildPhases = (
+				63AADDD91D3708A2003FE38C /* Sources */,
+				63AADDDA1D3708A2003FE38C /* Frameworks */,
+				63AADDDB1D3708A2003FE38C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreetRageProject;
+			productName = StreetRageProject;
+			productReference = 63AADDDD1D3708A2003FE38C /* StreetRageProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63AADDF41D3708A3003FE38C /* StreetRageProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63AADE0C1D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProjectTests" */;
+			buildPhases = (
+				63AADDF11D3708A3003FE38C /* Sources */,
+				63AADDF21D3708A3003FE38C /* Frameworks */,
+				63AADDF31D3708A3003FE38C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63AADDF71D3708A3003FE38C /* PBXTargetDependency */,
+			);
+			name = StreetRageProjectTests;
+			productName = StreetRageProjectTests;
+			productReference = 63AADDF51D3708A3003FE38C /* StreetRageProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		63AADDFF1D3708A3003FE38C /* StreetRageProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63AADE0F1D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProjectUITests" */;
+			buildPhases = (
+				63AADDFC1D3708A3003FE38C /* Sources */,
+				63AADDFD1D3708A3003FE38C /* Frameworks */,
+				63AADDFE1D3708A3003FE38C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63AADE021D3708A3003FE38C /* PBXTargetDependency */,
+			);
+			name = StreetRageProjectUITests;
+			productName = StreetRageProjectUITests;
+			productReference = 63AADE001D3708A3003FE38C /* StreetRageProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63AADDD51D3708A2003FE38C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "David Willian Berri";
+				TargetAttributes = {
+					63AADDDC1D3708A2003FE38C = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K8FS5EY4GG;
+					};
+					63AADDF41D3708A3003FE38C = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K8FS5EY4GG;
+						TestTargetID = 63AADDDC1D3708A2003FE38C;
+					};
+					63AADDFF1D3708A3003FE38C = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K8FS5EY4GG;
+						TestTargetID = 63AADDDC1D3708A2003FE38C;
+					};
+				};
+			};
+			buildConfigurationList = 63AADDD81D3708A2003FE38C /* Build configuration list for PBXProject "StreetRageProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63AADDD41D3708A2003FE38C;
+			productRefGroup = 63AADDDE1D3708A2003FE38C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63AADDDC1D3708A2003FE38C /* StreetRageProject */,
+				63AADDF41D3708A3003FE38C /* StreetRageProjectTests */,
+				63AADDFF1D3708A3003FE38C /* StreetRageProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63AADDDB1D3708A2003FE38C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AADDE31D3708A3003FE38C /* GameScene.sks in Resources */,
+				63AADDEF1D3708A3003FE38C /* LaunchScreen.storyboard in Resources */,
+				63AADDEC1D3708A3003FE38C /* Assets.xcassets in Resources */,
+				63AADDEA1D3708A3003FE38C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AADDF31D3708A3003FE38C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AADDFE1D3708A3003FE38C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63AADDD91D3708A2003FE38C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AADDE51D3708A3003FE38C /* GameScene.swift in Sources */,
+				63AADDE71D3708A3003FE38C /* GameViewController.swift in Sources */,
+				63AADDE11D3708A3003FE38C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AADDF11D3708A3003FE38C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AADDFA1D3708A3003FE38C /* StreetRageProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63AADDFC1D3708A3003FE38C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63AADE051D3708A3003FE38C /* StreetRageProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63AADDF71D3708A3003FE38C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63AADDDC1D3708A2003FE38C /* StreetRageProject */;
+			targetProxy = 63AADDF61D3708A3003FE38C /* PBXContainerItemProxy */;
+		};
+		63AADE021D3708A3003FE38C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63AADDDC1D3708A2003FE38C /* StreetRageProject */;
+			targetProxy = 63AADE011D3708A3003FE38C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63AADDE81D3708A3003FE38C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63AADDE91D3708A3003FE38C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63AADDED1D3708A3003FE38C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63AADDEE1D3708A3003FE38C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63AADE071D3708A3003FE38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63AADE081D3708A3003FE38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63AADE0A1D3708A3003FE38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StreetRageProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63AADE0B1D3708A3003FE38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StreetRageProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		63AADE0D1D3708A3003FE38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = StreetRageProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreetRageProject.app/StreetRageProject";
+			};
+			name = Debug;
+		};
+		63AADE0E1D3708A3003FE38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = StreetRageProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreetRageProject.app/StreetRageProject";
+			};
+			name = Release;
+		};
+		63AADE101D3708A3003FE38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = StreetRageProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StreetRageProject;
+			};
+			name = Debug;
+		};
+		63AADE111D3708A3003FE38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = StreetRageProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = StreetRageProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63AADDD81D3708A2003FE38C /* Build configuration list for PBXProject "StreetRageProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AADE071D3708A3003FE38C /* Debug */,
+				63AADE081D3708A3003FE38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63AADE091D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AADE0A1D3708A3003FE38C /* Debug */,
+				63AADE0B1D3708A3003FE38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63AADE0C1D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AADE0D1D3708A3003FE38C /* Debug */,
+				63AADE0E1D3708A3003FE38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63AADE0F1D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63AADE101D3708A3003FE38C /* Debug */,
+				63AADE111D3708A3003FE38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63AADDD51D3708A2003FE38C /* Project object */;
+}
