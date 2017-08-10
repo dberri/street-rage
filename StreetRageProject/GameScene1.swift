@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-enum Properties : Int {
+enum Properties1 : Int {
     case Left, Center, Right
     
     var xRelativePosition : CGFloat {
@@ -22,14 +22,19 @@ enum Properties : Int {
             return CGFloat(1.2)
         }
     }
-    
 }
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+enum VehicleType: Int {
+    case Normal = 0
+    case Cop
+    case TheLaneChanger
+}
+
+class GameScene1: SKScene, SKPhysicsContactDelegate {
     
     var street : SKSpriteNode!
     var player : SKSpriteNode!
-    var vehicle : SKSpriteNode!
+    var vehicles = [SKSpriteNode]()
     
     var hudNode : SKNode!
     
@@ -124,9 +129,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(player)
         
         player.physicsBody = SKPhysicsBody(texture: playerTexture, size: player.size)
-        player.physicsBody?.dynamic = false
+        //player.physicsBody?.dynamic = false
         player.physicsBody?.usesPreciseCollisionDetection = true
-        player.physicsBody?.restitution = 1.0
+        player.physicsBody?.restitution = 0.0
         player.physicsBody?.friction = 0.0
         player.physicsBody?.angularDamping = 0.0
         player.physicsBody?.linearDamping = 0.0
@@ -139,39 +144,46 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func createVehicles() {
         
-        let size = CGSize(width: self.frame.size.width / 4, height: self.frame.size.height / 4)
-        let vehicleTexture = SKTexture(imageNamed: "car")
-        vehicle = SKSpriteNode(texture: vehicleTexture)
-        vehicle.name = vehicleCategoryName
-        vehicle.size = size
-        vehicle.zPosition = 1
+        let nextQty = GKRandomDistribution(lowestValue: 0, highestValue: 2).nextInt()
+        let rand = GKRandomDistribution(lowestValue: 150, highestValue: 300).nextInt()
+        let speed = CGFloat(rand)
         
-        vehicle.physicsBody = SKPhysicsBody(texture: vehicleTexture, size: vehicle.size)
-        vehicle.physicsBody?.usesPreciseCollisionDetection = true
+        var lastXposition = possibleXPositions[0]
         
-        vehicle.physicsBody?.categoryBitMask = vehicleCategory
-        vehicle.physicsBody?.collisionBitMask = playerCategory
-        vehicle.physicsBody?.contactTestBitMask = playerCategory
+        for qty in 0..<nextQty {
         
-        vehicle.physicsBody?.velocity.dy = -200
-        
-        let yPosition = frame.height + vehicle.frame.height / 2
-        
-        possibleXPositions = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(possibleXPositions) as! [CGFloat]
-        
-        let xPosition = possibleXPositions[0]
-        
-        vehicle.position = CGPointMake(xPosition, yPosition)
-        
-        self.addChild(vehicle)
+            let enemyVehicle = EnemyVehicle()
+            var vehicle = SKSpriteNode()
+            
+            possibleXPositions = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(possibleXPositions) as! [CGFloat]
+            var xPosition = possibleXPositions[0]
+            
+            while xPosition == lastXposition {
+                possibleXPositions = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(possibleXPositions) as! [CGFloat]
+                xPosition = possibleXPositions[0]
+            }
+            
+            vehicle = enemyVehicle.configureVehicleOfType(.Normal, atXPosition: xPosition, speed: speed, frame: self.frame)
+            
+            if qty == 1 {
+                vehicle.position.y = vehicles.last!.position.y - 50
+                
+            }
+            
+            self.addChild(vehicle)
+            vehicles.append(vehicle)
+            
+            lastXposition = xPosition
+        }
     }
     
     func initCars() {
+        
         let create = SKAction.runBlock { [unowned self] in
             self.createVehicles()
         }
         
-        let wait = SKAction.waitForDuration(2.5)
+        let wait = SKAction.waitForDuration(2)
         let sequence = SKAction.sequence([create, wait])
         let repeatForever = SKAction.repeatActionForever(sequence)
         
@@ -179,6 +191,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBeginContact(contact: SKPhysicsContact) {
+        
+        player.physicsBody?.dynamic = false
         
         var firstBody = SKPhysicsBody()
         var secondBody = SKPhysicsBody()
@@ -193,11 +207,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if firstBody.categoryBitMask == playerCategory && secondBody.categoryBitMask == vehicleCategory {
             
+            let name = secondBody.node?.name
+            for node in vehicles {
+                if node.name == name {
+                    node.removeFromParent()
+                    
+                    if let index = vehicles.indexOf(node) {
+                        vehicles.removeAtIndex(index)
+                        
+                    }
+                }
+            }
             
             //let gameOverScene = GameOverScene()
             //self.view?.presentScene(gameOverScene)
         }
-
+        player.physicsBody?.dynamic = true
     }
     
     func createHUD() -> SKNode {
@@ -228,22 +253,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       
+        
         let touch = touches.first
-        let touchLocation = touch?.locationInNode(self)
-        let touchedNode = self.nodeAtPoint(touchLocation!)
+        let touchLocation = touch!.locationInNode(self)
+        let nodes = nodesAtPoint(touchLocation)
         
-        if nodeAtPoint(touchLocation!) == pausedNode {
-            print("pause")
-        }
-        
-        if let name = touchedNode.name {
-            print(name)
-            if name == "pauseButton" {
+        for node in nodes {
+            if node.name == "pauseButton" {
                 print("pause")
             }
         }
-        
     }
     
     override func update(currentTime: NSTimeInterval) {
@@ -262,6 +281,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             background2.position.y = background1.position.y + background1.size.height
             
         }
+        
+        for node in vehicles {
+            if node.position.y <= -frame.height {
+                node.removeFromParent()
+                
+                if let index = vehicles.indexOf(node) {
+                    vehicles.removeAtIndex(index)
+                }
+            }
+        }
+        print(player.physicsBody!.velocity.dy)
     }
     
     func swipedRight(sender: UISwipeGestureRecognizer) {
@@ -311,11 +341,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func swipedUp(sender: UISwipeGestureRecognizer) {
-        print("books the player or trigger weapon")
+        if player.physicsBody!.velocity.dy == 0 {
+            player.physicsBody?.velocity.dy = 50
+        }
+        
     }
     
     func swipedDown(sender: UISwipeGestureRecognizer) {
-        print("break?")
+        let goBack = SKAction.moveToY(player.frame.size.height / 2, duration: 1)
+        player.physicsBody?.velocity.dy = 0.0
+        player.runAction(goBack)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63612C8D1D4A3828000987DC /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63612C8C1D4A3828000987DC /* MenuScene.swift */; };
+		6362CE441D3E4B6D00D85C25 /* GameScene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362CE431D3E4B6D00D85C25 /* GameScene1.swift */; };
+		6362CE461D3E5DEC00D85C25 /* GameObjectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362CE451D3E5DEC00D85C25 /* GameObjectNode.swift */; };
+		6362CE481D3E769800D85C25 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362CE471D3E769800D85C25 /* GameState.swift */; };
+		6362CF081D40271000D85C25 /* EnemyVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362CF071D40271000D85C25 /* EnemyVehicle.swift */; };
+		636F8D8F1D46D46500DC8F74 /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636F8D8E1D46D46500DC8F74 /* GameScene2.swift */; };
 		63AADDE11D3708A3003FE38C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AADDE01D3708A2003FE38C /* AppDelegate.swift */; };
 		63AADDE31D3708A3003FE38C /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 63AADDE21D3708A3003FE38C /* GameScene.sks */; };
 		63AADDE51D3708A3003FE38C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AADDE41D3708A3003FE38C /* GameScene.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63612C8C1D4A3828000987DC /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		6362CE431D3E4B6D00D85C25 /* GameScene1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene1.swift; sourceTree = "<group>"; };
+		6362CE451D3E5DEC00D85C25 /* GameObjectNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObjectNode.swift; sourceTree = "<group>"; };
+		6362CE471D3E769800D85C25 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		6362CF071D40271000D85C25 /* EnemyVehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyVehicle.swift; sourceTree = "<group>"; };
+		636F8D8E1D46D46500DC8F74 /* GameScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
 		63AADDDD1D3708A2003FE38C /* StreetRageProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetRageProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63AADDE01D3708A2003FE38C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63AADDE21D3708A3003FE38C /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -102,9 +114,15 @@
 			isa = PBXGroup;
 			children = (
 				63AADDE01D3708A2003FE38C /* AppDelegate.swift */,
+				63612C8C1D4A3828000987DC /* MenuScene.swift */,
+				636F8D8E1D46D46500DC8F74 /* GameScene2.swift */,
+				6362CE471D3E769800D85C25 /* GameState.swift */,
+				63AADDE61D3708A3003FE38C /* GameViewController.swift */,
 				63AADDE21D3708A3003FE38C /* GameScene.sks */,
 				63AADDE41D3708A3003FE38C /* GameScene.swift */,
-				63AADDE61D3708A3003FE38C /* GameViewController.swift */,
+				6362CF071D40271000D85C25 /* EnemyVehicle.swift */,
+				6362CE451D3E5DEC00D85C25 /* GameObjectNode.swift */,
+				6362CE431D3E4B6D00D85C25 /* GameScene1.swift */,
 				63AADDE81D3708A3003FE38C /* Main.storyboard */,
 				63AADDEB1D3708A3003FE38C /* Assets.xcassets */,
 				63AADDED1D3708A3003FE38C /* LaunchScreen.storyboard */,
@@ -200,15 +218,18 @@
 					63AADDDC1D3708A2003FE38C = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = K8FS5EY4GG;
+						LastSwiftMigration = 0810;
 					};
 					63AADDF41D3708A3003FE38C = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = K8FS5EY4GG;
+						LastSwiftMigration = 0810;
 						TestTargetID = 63AADDDC1D3708A2003FE38C;
 					};
 					63AADDFF1D3708A3003FE38C = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = K8FS5EY4GG;
+						LastSwiftMigration = 0810;
 						TestTargetID = 63AADDDC1D3708A2003FE38C;
 					};
 				};
@@ -266,7 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6362CE461D3E5DEC00D85C25 /* GameObjectNode.swift in Sources */,
+				6362CF081D40271000D85C25 /* EnemyVehicle.swift in Sources */,
+				6362CE441D3E4B6D00D85C25 /* GameScene1.swift in Sources */,
+				63612C8D1D4A3828000987DC /* MenuScene.swift in Sources */,
 				63AADDE51D3708A3003FE38C /* GameScene.swift in Sources */,
+				6362CE481D3E769800D85C25 /* GameState.swift in Sources */,
+				636F8D8F1D46D46500DC8F74 /* GameScene2.swift in Sources */,
 				63AADDE71D3708A3003FE38C /* GameViewController.swift in Sources */,
 				63AADDE11D3708A3003FE38C /* AppDelegate.swift in Sources */,
 			);
@@ -360,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -400,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,10 +439,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StreetRageProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -423,10 +455,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StreetRageProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -439,6 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreetRageProject.app/StreetRageProject";
 			};
 			name = Debug;
@@ -451,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StreetRageProject.app/StreetRageProject";
 			};
 			name = Release;
@@ -463,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = StreetRageProject;
 			};
 			name = Debug;
@@ -474,6 +514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidberri.StreetRageProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = StreetRageProject;
 			};
 			name = Release;
@@ -497,6 +538,7 @@
 				63AADE0B1D3708A3003FE38C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63AADE0C1D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +547,7 @@
 				63AADE0E1D3708A3003FE38C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63AADE0F1D3708A3003FE38C /* Build configuration list for PBXNativeTarget "StreetRageProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +556,7 @@
 				63AADE111D3708A3003FE38C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
